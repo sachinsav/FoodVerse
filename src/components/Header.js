@@ -21,11 +21,11 @@ const Header = () => {
         </div>
         <div className="h-full px-2 hidden sm:block">
           <ul className="flex items-center justify-center h-full">
-            <li className="p-2 hover:bg-orange-100 hover:text-orange-500 h-full text-xl flex items-center">
+            <li className="py-2 px-3 hover:bg-orange-100 hover:text-orange-500 h-full text-xl flex items-center">
               <a href="#">Home</a></li>
-            <li className="p-2 hover:bg-orange-100 hover:text-orange-500 h-full text-xl flex items-center">AboutUs</li>
-            <li className="p-2 hover:bg-orange-100 hover:text-orange-500 h-full text-xl flex items-center">Cart</li>
-            <li className="p-2 hover:bg-orange-100 hover:text-orange-500 h-full text-xl flex items-center">LogIn</li>
+            <li className="py-2 px-3 hover:bg-orange-100 hover:text-orange-500 h-full text-xl flex items-center">AboutUs</li>
+            <li className="py-2 px-3 hover:bg-orange-100 hover:text-orange-500 h-full text-xl flex items-center">Cart</li>
+            <li className="py-2 px-3 hover:bg-orange-100 hover:text-orange-500 h-full text-xl flex items-center">LogIn</li>
           </ul>
         </div>
         <div className="h-full px-2 sm:hidden">
