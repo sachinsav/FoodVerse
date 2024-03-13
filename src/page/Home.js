@@ -1,7 +1,10 @@
+import Carousel from "../components/Carousel";
+
 const Home = () => {
+    console.log("Home")
     return (
         <div>
-            <h1 className="text-red-800"> Home</h1>
+            <Carousel />
         </div>
     );
 }

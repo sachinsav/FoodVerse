@@ -5,6 +5,7 @@ import Home from './Home';
 const Layout = () => {
     return (
         <>
+            <div><h1 className="text-3xl h-14">H</h1></div>
             <Header />
             <Home />
             <Footer />
