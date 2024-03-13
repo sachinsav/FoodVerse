@@ -14,7 +14,7 @@ const Header = () => {
     setShowMenu(true);
   }
   return (
-    <div className="absolute w-screen top-0 z-50">
+    <div className="absolute w-screen top-0 z-50 shadow-lg">
       <nav className="flex justify-between items-center bg-orange-600 h-14 text-white ">
         <div className="h-full px-2 py-1">
           <h1 className="h-full text-3xl font-extrabold flex items-center" id="logo">F<span id="logoo">o</span>odVerse</h1>

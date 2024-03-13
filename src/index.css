@@ -11,3 +11,10 @@
 	40% {transform: translateY(-25px);}
 	60% {transform: translateY(-15px);}
 }
+
+.displayItem{
+	display: block;
+}
+.hideItem{
+	display: none;
+}

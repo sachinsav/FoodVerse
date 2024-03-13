@@ -4,7 +4,7 @@ const Carousel = () => {
   const [data, setData] = useState([]);
   const [startIndex, setStartIndex] = useState(0);
   const [itemsToShow, setItemsToShow] = useState(6);
-  const visibleItems = data.slice(startIndex, startIndex + itemsToShow);
+
   const isLeftDisabled = startIndex===0;
   const isRightDisabled = startIndex === (data.length - itemsToShow);
 
@@ -26,7 +26,6 @@ const Carousel = () => {
     (async function () {
       const cdata = await JSON.parse(cd);
       setData(cdata);
-      console.log(cdata);
     })();
   }, []);
 
@@ -52,31 +51,31 @@ const Carousel = () => {
     justifyContent:"space-around",
     flexWrap: "nowrap",
     overflow: "hidden",
-    transition: "transform 0.3s ease-in-out",
-    height: "7rem",
-    // transform: `translateX(-${startIndex * 100/itemsToShow}%)`, // Adjust the percentage based on your needs
+    alignItem: "center",
+    height: "7rem"
+    
   };
   return (
-    <div className="text-black h-">
+    <div className="py-3 shadow-sm">
       <div className="relative px-3">
         <div style={containerStyle}>
-          {visibleItems.map((item) => (
-            <div key={item.id} className="h-full w-full">
-              <img src={baseImgUrl + item.imageId} alt={item.id} className="h-full w-auto"/>
+          {data.map((item, ind) => (
+            <div key={item.id} className={`${(ind<(startIndex+itemsToShow) && ind>=startIndex)?'displayItem':'hideItem'}`}>
+              <img src={baseImgUrl + item.imageId} alt={item.id} className={`h-full w-auto`}/>
             </div>
           ))}
         </div>
 
         <div className="absolute top-0 left-0 w-full h-full flex items-center justify-between">
           <button
-            className={`text-white ${isLeftDisabled?'bg-gray-500':'bg-cyan-500'} p-2 rounded`}
+            className={`text-white ${isLeftDisabled?'bg-gray-500':'bg-orange-400'} p-2 rounded`}
             onClick={scrollLeft}
             disabled={startIndex === 0}
           >
             &lt;
           </button>
           <button
-            className={`text-white ${isRightDisabled?'bg-gray-500':'bg-cyan-500'} p-2 rounded`}
+            className={`text-white ${isRightDisabled?'bg-gray-500':'bg-orange-400'} p-2 rounded`}
             onClick={scrollRight}
             disabled={startIndex === data.length - itemsToShow}
           >
