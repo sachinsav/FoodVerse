@@ -51,7 +51,7 @@ const Carousel2 = () => {
  
   return (
     <div className="py-3 shadow-sm bg-slate-00 h-">
-      <h1 className="px-5 font-extrabold text-xl text-gray-900">What's on your mind?</h1>
+      <h1 className="px-5 font-extrabold text-xl text-gray-700">What's on your mind?</h1>
       <div className="relative px-5">
         <div style={containerStyle} id="container">
           {data.map((item, ind) => (

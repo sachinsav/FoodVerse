@@ -21,28 +21,28 @@ const Card = ({ data }) => {
     (aggregatedDiscountInfoV3?.subHeader ?? '')
 console.log(data)
   const cuisinesrawString = cuisines?.join(", ");
-  const cuisinesString = cuisinesrawString.length>20?cuisinesrawString.slice(0,17)+"...":cuisinesrawString;
+  const cuisinesString = cuisinesrawString;
   
   return (
     <div>
-      <div className="inline-block rounded-xl min-w-52 mx-2 my-3">
+      <div className="inline-block rounded-xl w-52 mx-2 my-3 text-gray-700">
         <div className="relative h-40 w-full">
           <img
             src={baseCardImgUrl + cloudinaryImageId}
-            className="w-full h-full rounded-xl"
+            className="w-full h-full rounded-xl object-cover"
           />
           <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black to-transparent rounded-xl">
-            <h1 className="font-extrabold text-lg text-white px-2 py-1">{disCountString}</h1>
+            <h1 className="font-extrabold text-lg text-white px-2 pt-5">{disCountString}</h1>
           </div>
         </div>
-        <div className="px-1">
-          <h2 className="font-bold">{name}</h2>
-          <h3 className="font-bold">
-            <GradeIcon className="text-green-600"/>
-            {avgRating} . {sla?.slaString}
+        <div className="px-1 mt-2">
+          <h2 className="font-bold text-xl -mb-1 whitespace-nowrap overflow-hidden text-ellipsis">{name}</h2>
+          <h3 className="font-bold whitespace-nowrap overflow-hidden text-ellipsis">
+            <GradeIcon className="text-green-600" fontSize="small"/>
+            &nbsp;{avgRating} . {sla?.slaString}
           </h3>
-          <h5>{cuisinesString} </h5>
-          <h5>{areaName}</h5>
+          <p className="font-thin text-sm text-gray-600 whitespace-nowrap overflow-hidden text-ellipsis">{cuisinesString}</p>
+          <p className="font-thin text-sm text-gray-600 whitespace-nowrap overflow-hidden text-ellipsis">{areaName}</p>
         </div>
       </div>
     </div>
