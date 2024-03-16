@@ -19,7 +19,7 @@ const Card = ({ data }) => {
     (aggregatedDiscountInfoV3?.header ?? '') +
     " " +
     (aggregatedDiscountInfoV3?.subHeader ?? '')
-console.log(data)
+
   const cuisinesrawString = cuisines?.join(", ");
   const cuisinesString = cuisinesrawString;
   

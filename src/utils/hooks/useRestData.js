@@ -14,17 +14,21 @@ const  useRestData = () => {
     useEffect(()=>{
         const start = (pageNumber-1)*numberOfItem
         const end = pageNumber*numberOfItem
-        console.log(start,end, restAllData.length)
+
         if(start>=restAllData.length){
             setHasMore(false)
             return;
         }else{
             setHasMore(true);
         }
+        i=0
+        while(i<10000000){
+            i+=1
+        }
         const newData = restAllData.slice(start, end)
         console.log("newDataArrived")
         setRestData(prevData => ([...prevData, ...newData]))
-        if(end>restAllData.length) setHasMore(false);
+        if(end>=restAllData.length) setHasMore(false);
     
     }, [pageNumber, restAllData])
 

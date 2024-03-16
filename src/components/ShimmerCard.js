@@ -1,11 +1,12 @@
+import { forwardRef } from "react";
 
-const ShimmerCard = () => {
+const ShimmerCard = forwardRef((props, ref) => {
     return (
         <div>
           <div className="inline-block rounded-xl w-52 mx-2 my-3 animate-pulse">
             <div className="relative h-40 w-full">
               <div
-                className="w-full h-full rounded-xl object-cover bg-gray-600"
+                ref={ref} className="w-full h-full rounded-xl object-cover bg-gray-600"
               />
               
             </div>
@@ -18,6 +19,6 @@ const ShimmerCard = () => {
           </div>
         </div>
       );
-}
+})
 
 export default ShimmerCard;
